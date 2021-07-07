@@ -1,0 +1,14 @@
+{
+  "name": "awesome-image-collector",
+  "version": "2.0.0",
+  "main": "index.js",
+  "author": "Weidows <utsuko27@qq.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "min": "uglifyjs ./src/collector.js -o dist/collector.min.js"
+  },
+  "devDependencies": {
+    "uglifyjs": "2.4.11"
+  }
+}
