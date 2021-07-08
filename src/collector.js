@@ -3,7 +3,7 @@
  * @Author: Weidows
  * @Date: 2021-07-07 15:47:18
  * @LastEditors: Weidows
- * @LastEditTime: 2021-07-07 23:53:36
+ * @LastEditTime: 2021-07-08 13:11:47
  * @FilePath: \awesome-image-collector\src\collector.js
  * @Description:
  * @!: *********************************************************************
@@ -16,9 +16,8 @@ async function start(imageElements) {
 
   for (const imageElement of imageElements) {
     let url =
-      null == imageElement.src.toString()
-        ? imageElement.href.toString()
-        : imageElement.src.toString();
+      imageElement.src == undefined ? imageElement.href : imageElement.src;
+    if (url == undefined) continue;
     let fileName = url.substring(
       url.lastIndexOf("/") + 1,
       url.lastIndexOf(".") - 1
@@ -35,12 +34,13 @@ function getBlob(url, type) {
   return new Promise((ret, res) => {
     let img = new Image();
     //需要放在图片赋值前，否则部分浏览器会报错
-    img.setAttribute("crossOrigin", "anonymous");
+    // img.crossOrigin = "anonymous";
+    img.crossOrigin = "*";
     img.src = url;
     img.onload = function () {
       let _canvas = document.createElement("canvas");
-      _canvas.setAttribute("width", this.width);
-      _canvas.setAttribute("height", this.height);
+      _canvas.width = this.width;
+      _canvas.height = this.height;
       _canvas.getContext("2d").drawImage(this, 0, 0, this.width, this.height);
       //转格式
       _canvas.toBlob(

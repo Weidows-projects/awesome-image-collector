@@ -3,7 +3,7 @@
  * @Author: Weidows
  * @Date: 2021-07-07 20:30:59
  * @LastEditors: Weidows
- * @LastEditTime: 2021-07-08 00:03:27
+ * @LastEditTime: 2021-07-08 12:07:52
  * @FilePath: \awesome-image-collector\implements\SM.MS-collector.js
  * @Description:
  * @!: *********************************************************************
@@ -21,7 +21,13 @@
     .appendChild(jsZip)
     .appendChild(collector);
 
-  // ======================== 添加样式 ========================
+  collector.onload = function () {
+    smmsCollector();
+  };
+})();
+
+// ======================== 添加样式 ========================
+function smmsCollector() {
   // 下载图片按钮 (不主动下载,按按钮时才下载)
   let downloadButton = document.createElement("button");
   downloadButton.type = "button";
@@ -61,4 +67,4 @@
       .getElementsByClassName("sidebar-menu tree")[0]
       .appendChild(deleteLi);
   }
-})();
+}

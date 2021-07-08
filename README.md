@@ -3,7 +3,7 @@
  * @Author: Weidows
  * @Date: 2021-07-06 19:42:41
  * @LastEditors: Weidows
- * @LastEditTime: 2021-07-08 00:37:15
+ * @LastEditTime: 2021-07-08 12:11:30
  * @FilePath: \awesome-image-collector\README.md
  * @Description:
  * @!: *********************************************************************
@@ -13,7 +13,7 @@
 
 ⭐️ Awesome-Image-Collector ⭐️
 
-_拾图者_
+_拾图虫_
 
 </h1>
 
@@ -45,9 +45,15 @@ _拾图者_
 
 # 实现
 
-## SM.MS-collector
+## [SM.MS-collector](./implements/SM.MS-collector.js)
 
 > [文档地址](https://weidows.github.io/post/tools/SM-MS-downloader) | [备用文档地址](https://weidows.gitee.io/post/tools/SM-MS-downloader)
+
+---
+
+## [QQ-collections-collector](./implements/QQ-collections-collector.js)
+
+- 适用于下载 QQ 收藏中的图片集.
 
 ![分割线](https://cdn.jsdelivr.net/gh/Weidows/Images/img/divider.png)
 

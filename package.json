@@ -6,7 +6,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "min": "uglifyjs ./src/collector.js -o dist/collector.min.js"
+    "build": "uglifyjs ./src/collector.js -o dist/collector.min.js"
   },
   "devDependencies": {
     "uglifyjs": "2.4.11"

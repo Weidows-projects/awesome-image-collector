@@ -10,9 +10,11 @@
     .appendChild(jsZip)
     .appendChild(collector);
 
-  // TODO getImageElements - <a>/<img>
-  // 需要做的就是筛选出imageElements标签集合, 并传给start()
-  let imageElements;
+  collector.onload = function () {
+    // TODO getImageElements - <a>/<img>
+    // 需要做的就是筛选出imageElements标签集合, 并传给start()
+    let imageElements;
 
-  start(imageElements);
+    start(imageElements);
+  };
 })();
