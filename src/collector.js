@@ -3,7 +3,7 @@
  * @Author: Weidows
  * @Date: 2021-07-07 15:47:18
  * @LastEditors: Weidows
- * @LastEditTime: 2021-07-08 13:11:47
+ * @LastEditTime: 2021-07-09 10:05:23
  * @FilePath: \awesome-image-collector\src\collector.js
  * @Description:
  * @!: *********************************************************************
@@ -13,6 +13,8 @@
 async function start(imageElements) {
   console.log("开始准备数据 (Start to prepare the data).");
   var zip = new JSZip();
+  let fileNameCount = 0,
+    lastFileName = "";
 
   for (const imageElement of imageElements) {
     let url =
@@ -20,12 +22,20 @@ async function start(imageElements) {
     if (url == undefined) continue;
     let fileName = url.substring(
       url.lastIndexOf("/") + 1,
-      url.lastIndexOf(".") - 1
+      url.lastIndexOf(".")
     );
     let extName = url.substring(url.lastIndexOf(".") + 1);
 
+    // 防止文件重名
+    if (lastFileName == fileName) {
+      fileName = fileNameCount;
+    }
+    fileNameCount++;
+    lastFileName = fileName;
+
     let blob = await getBlob(url, extName);
     zip.file(fileName + "." + extName, blob, { base64: false });
+    console.log("Successfully fetch the image.");
   }
   download(zip);
 }
@@ -33,9 +43,7 @@ async function start(imageElements) {
 function getBlob(url, type) {
   return new Promise((ret, res) => {
     let img = new Image();
-    //需要放在图片赋值前，否则部分浏览器会报错
-    // img.crossOrigin = "anonymous";
-    img.crossOrigin = "*";
+    img.crossOrigin = "anonymous"; //需要放在图片赋值前，否则部分浏览器会报错
     img.src = url;
     img.onload = function () {
       let _canvas = document.createElement("canvas");

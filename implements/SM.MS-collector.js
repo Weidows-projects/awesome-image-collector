@@ -3,7 +3,7 @@
  * @Author: Weidows
  * @Date: 2021-07-07 20:30:59
  * @LastEditors: Weidows
- * @LastEditTime: 2021-07-08 12:07:52
+ * @LastEditTime: 2021-07-09 00:05:15
  * @FilePath: \awesome-image-collector\implements\SM.MS-collector.js
  * @Description:
  * @!: *********************************************************************
@@ -21,9 +21,9 @@
     .appendChild(jsZip)
     .appendChild(collector);
 
-  collector.onload = function () {
+  setTimeout(function () {
     smmsCollector();
-  };
+  }, 500);
 })();
 
 // ======================== 添加样式 ========================

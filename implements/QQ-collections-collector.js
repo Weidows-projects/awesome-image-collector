@@ -3,7 +3,7 @@
  * @Author: Weidows
  * @Date: 2021-07-07 20:30:06
  * @LastEditors: Weidows
- * @LastEditTime: 2021-07-08 12:39:38
+ * @LastEditTime: 2021-07-09 09:44:14
  * @FilePath: \awesome-image-collector\implements\QQ-collections-collector.js
  * @Description:
  * @!: *********************************************************************
@@ -21,16 +21,21 @@
     .appendChild(jsZip)
     .appendChild(collector);
 
-  collector.onload = function () {
+  setTimeout(function () {
     qqCollector();
-  };
+  }, 500);
 })();
 
 // ======================== 筛选-下载 ========================
 function qqCollector() {
   let imageElements = document.getElementsByTagName("img");
+  for (const imageElement of imageElements) {
+    // 把接口添加后缀名
+    if (!imageElement.src.includes(".png")) imageElement.src += ".png";
 
+    console.log(fileName);
+  }
   // TODO 把用户头像去掉
 
-  start(imageElements);
+  // start(imageElements);
 }
