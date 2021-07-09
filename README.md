@@ -3,7 +3,7 @@
  * @Author: Weidows
  * @Date: 2021-07-06 19:42:41
  * @LastEditors: Weidows
- * @LastEditTime: 2021-07-08 12:11:30
+ * @LastEditTime: 2021-07-09 10:42:22
  * @FilePath: \awesome-image-collector\README.md
  * @Description:
  * @!: *********************************************************************
@@ -23,7 +23,9 @@ _拾图虫_
 
 2. 下载原始地址图片数据,不会缩放转码,无 base64 中间态.
 
-3. 下载后自动后台打包为 Zip 文件,方便快捷.
+3. 可通过插件实现跨域资源获取.
+
+4. 下载后自动后台打包为 Zip 文件,方便快捷.
 
 ![分割线](https://cdn.jsdelivr.net/gh/Weidows/Images/img/divider.png)
 

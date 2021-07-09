@@ -3,7 +3,7 @@
  * @Author: Weidows
  * @Date: 2021-07-07 20:30:06
  * @LastEditors: Weidows
- * @LastEditTime: 2021-07-09 09:44:14
+ * @LastEditTime: 2021-07-09 10:41:29
  * @FilePath: \awesome-image-collector\implements\QQ-collections-collector.js
  * @Description:
  * @!: *********************************************************************
@@ -32,10 +32,9 @@ function qqCollector() {
   for (const imageElement of imageElements) {
     // 把接口添加后缀名
     if (!imageElement.src.includes(".png")) imageElement.src += ".png";
-
-    console.log(fileName);
   }
-  // TODO 把用户头像去掉
 
+  // TODO 去掉头像
+  console.log("here");
   // start(imageElements);
 }

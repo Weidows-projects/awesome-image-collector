@@ -3,7 +3,7 @@
  * @Author: Weidows
  * @Date: 2021-07-07 15:47:18
  * @LastEditors: Weidows
- * @LastEditTime: 2021-07-09 10:05:23
+ * @LastEditTime: 2021-07-09 10:35:09
  * @FilePath: \awesome-image-collector\src\collector.js
  * @Description:
  * @!: *********************************************************************
@@ -13,28 +13,17 @@
 async function start(imageElements) {
   console.log("开始准备数据 (Start to prepare the data).");
   var zip = new JSZip();
-  let fileNameCount = 0,
-    lastFileName = "";
 
   for (const imageElement of imageElements) {
+    // 获取url和文件后缀名
     let url =
       imageElement.src == undefined ? imageElement.href : imageElement.src;
     if (url == undefined) continue;
-    let fileName = url.substring(
-      url.lastIndexOf("/") + 1,
-      url.lastIndexOf(".")
-    );
     let extName = url.substring(url.lastIndexOf(".") + 1);
 
-    // 防止文件重名
-    if (lastFileName == fileName) {
-      fileName = fileNameCount;
-    }
-    fileNameCount++;
-    lastFileName = fileName;
-
+    // 获取二进制数据/压缩
     let blob = await getBlob(url, extName);
-    zip.file(fileName + "." + extName, blob, { base64: false });
+    zip.file(new Date().getTime() + "." + extName, blob, { base64: false });
     console.log("Successfully fetch the image.");
   }
   download(zip);
