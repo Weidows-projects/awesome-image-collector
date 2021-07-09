@@ -3,7 +3,7 @@
  * @Author: Weidows
  * @Date: 2021-07-06 19:42:41
  * @LastEditors: Weidows
- * @LastEditTime: 2021-07-09 23:40:16
+ * @LastEditTime: 2021-07-10 00:16:05
  * @FilePath: \awesome-image-collector\README.md
  * @Description:
  * @!: *********************************************************************
@@ -101,9 +101,15 @@ _拾图虫_
 
 ## [QQ-collections-collector](./implements/QQ-collections-collector.js)
 
-- 适用于下载 QQ 收藏中的图片集.
+- <details>
 
-  需要安装浏览器插件
+    <summary> -> 适用于下载 QQ 收藏中的图片集 (需要安装浏览器插件) <- </summary>
+
+  <img src="https://i.loli.net/2021/07/10/eLkP1iV5YXGm6Zy.png" alt="20210710001553" />
+
+  ***
+
+  </details>
 
 ![分割线](https://cdn.jsdelivr.net/gh/Weidows/Images/img/divider.png)
 
