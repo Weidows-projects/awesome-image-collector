@@ -4,7 +4,7 @@
     collector = document.createElement("script");
   jsZip.src = "https://cdn.bootcdn.net/ajax/libs/jszip/3.5.0/jszip.min.js";
   collector.src =
-    "https://cdn.jsdelivr.net/gh/Weidows-projects/awesome-image-collector/dist/collector.min.js";
+    "https://cdn.jsdelivr.net/gh/Weidows-projects/awesome-image-collector@master/dist/collector.min.js";
   document
     .getElementsByTagName("head")[0]
     .appendChild(jsZip)

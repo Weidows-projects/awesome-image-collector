@@ -3,7 +3,7 @@
  * @Author: Weidows
  * @Date: 2021-07-07 20:30:06
  * @LastEditors: Weidows
- * @LastEditTime: 2021-07-09 10:41:29
+ * @LastEditTime: 2021-07-09 23:53:01
  * @FilePath: \awesome-image-collector\implements\QQ-collections-collector.js
  * @Description:
  * @!: *********************************************************************
@@ -15,7 +15,7 @@
     collector = document.createElement("script");
   jsZip.src = "https://cdn.bootcdn.net/ajax/libs/jszip/3.5.0/jszip.min.js";
   collector.src =
-    "https://cdn.jsdelivr.net/gh/Weidows-projects/awesome-image-collector/dist/collector.min.js";
+    "https://cdn.jsdelivr.net/gh/Weidows-projects/awesome-image-collector@master/dist/collector.min.js";
   document
     .getElementsByTagName("head")[0]
     .appendChild(jsZip)
@@ -35,6 +35,5 @@ function qqCollector() {
   }
 
   // TODO 去掉头像
-  console.log("here");
-  // start(imageElements);
+  start(imageElements);
 }

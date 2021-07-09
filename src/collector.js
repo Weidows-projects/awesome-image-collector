@@ -3,7 +3,7 @@
  * @Author: Weidows
  * @Date: 2021-07-07 15:47:18
  * @LastEditors: Weidows
- * @LastEditTime: 2021-07-09 10:35:09
+ * @LastEditTime: 2021-07-10 00:03:43
  * @FilePath: \awesome-image-collector\src\collector.js
  * @Description:
  * @!: *********************************************************************
@@ -24,7 +24,9 @@ async function start(imageElements) {
     // 获取二进制数据/压缩
     let blob = await getBlob(url, extName);
     zip.file(new Date().getTime() + "." + extName, blob, { base64: false });
-    console.log("Successfully fetch the image.");
+    console.log(
+      "Successfully fetch one of the image,total is " + imageElements.length
+    );
   }
   download(zip);
 }
