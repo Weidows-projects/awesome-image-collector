@@ -3,7 +3,7 @@
  * @Author: Weidows
  * @Date: 2021-07-06 19:42:41
  * @LastEditors: Weidows
- * @LastEditTime: 2021-07-10 00:16:05
+ * @LastEditTime: 2021-07-10 09:14:15
  * @FilePath: \awesome-image-collector\README.md
  * @Description:
  * @!: *********************************************************************
@@ -107,9 +107,17 @@ _拾图虫_
 
   <img src="https://i.loli.net/2021/07/10/eLkP1iV5YXGm6Zy.png" alt="20210710001553" />
 
+  <img src="https://i.loli.net/2021/07/10/QV7WpATHJrGEPxU.png" alt="20210710090643" />
+
   ***
 
   </details>
+
+---
+
+## [暴力爬虫](./implements/violent-collector.js)
+
+- 硬核爬取下载网页内所有图片 (如有不想要的图需要后期手动删掉)
 
 ![分割线](https://cdn.jsdelivr.net/gh/Weidows/Images/img/divider.png)
 
