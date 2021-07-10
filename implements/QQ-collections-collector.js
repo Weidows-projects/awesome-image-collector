@@ -3,7 +3,7 @@
  * @Author: Weidows
  * @Date: 2021-07-07 20:30:06
  * @LastEditors: Weidows
- * @LastEditTime: 2021-07-09 23:53:01
+ * @LastEditTime: 2021-07-10 12:05:33
  * @FilePath: \awesome-image-collector\implements\QQ-collections-collector.js
  * @Description:
  * @!: *********************************************************************
@@ -29,11 +29,19 @@
 // ======================== 筛选-下载 ========================
 function qqCollector() {
   let imageElements = document.getElementsByTagName("img");
-  for (const imageElement of imageElements) {
+
+  // 去掉头像
+  imageElements[0].parentNode.removeChild(imageElements[0]);
+
+  for (let i = 0; i < imageElements.length; i++) {
+    // 去掉404图片
+    if (imageElements[i].src.includes("qq.com")) {
+      imageElements[i].parentNode.removeChild(imageElements[i]);
+      i--;
+    }
     // 把接口添加后缀名
-    if (!imageElement.src.includes(".png")) imageElement.src += ".png";
+    if (!imageElements[i].src.includes(".png")) imageElements[i].src += ".png";
   }
 
-  // TODO 去掉头像
   start(imageElements);
 }
