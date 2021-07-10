@@ -3,7 +3,7 @@
  * @Author: Weidows
  * @Date: 2021-07-06 19:42:41
  * @LastEditors: Weidows
- * @LastEditTime: 2021-07-10 09:14:15
+ * @LastEditTime: 2021-07-10 09:23:20
  * @FilePath: \awesome-image-collector\README.md
  * @Description:
  * @!: *********************************************************************
@@ -26,6 +26,8 @@ _拾图虫_
 3. 可通过插件实现跨域资源获取.
 
 4. 下载后自动后台打包为 Zip 文件,方便快捷.
+
+5. 虽然市面上有爬取图片功能的插件,但是开放性/自定义性不高,此脚本开源带来 100% 可自定义性.
 
 ![分割线](https://cdn.jsdelivr.net/gh/Weidows/Images/img/divider.png)
 
