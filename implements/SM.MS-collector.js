@@ -9,7 +9,7 @@
  * @!: *********************************************************************
  */
 
-(function () {
+(async () => {
   // 引入库函数
   const jsZip = document.createElement("script"),
     collector = document.createElement("script");
@@ -21,9 +21,11 @@
     .appendChild(jsZip)
     .appendChild(collector);
 
-  setTimeout(function () {
-    smmsCollector();
-  }, 500);
+  await Promise.all([
+    new Promise(resolve => jsZip.onload = () => window.JSZip && resolve()),
+    new Promise(resolve => collector.onload = () => window.start && resolve()),
+  ]);
+  smmsCollector();
 })();
 
 // ======================== 添加样式 ========================
