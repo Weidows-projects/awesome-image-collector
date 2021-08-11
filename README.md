@@ -3,7 +3,7 @@
  * @Author: Weidows
  * @Date: 2021-07-06 19:42:41
  * @LastEditors: Weidows
- * @LastEditTime: 2021-08-11 10:19:05
+ * @LastEditTime: 2021-08-11 10:30:14
  * @FilePath: \awesome-image-collector\README.md
  * @Description:
  * @!: *********************************************************************
@@ -35,39 +35,6 @@ _拾图虫_
 
 - 1.入口文件为: [index.js](./index.js) ,TODO 处为函数入口.
 
-  <details>
-
-    <summary> -> 查看代码 View the code <- </summary>
-
-  ```js
-  (async () => {
-    // 引入库函数
-    const jsZip = document.createElement("script"),
-      collector = document.createElement("script");
-    jsZip.src = "https://cdn.bootcdn.net/ajax/libs/jszip/3.5.0/jszip.min.js";
-    collector.src =
-      "https://cdn.jsdelivr.net/gh/Weidows-projects/awesome-image-collector@master/dist/collector.min.js";
-    document
-      .getElementsByTagName("head")[0]
-      .appendChild(jsZip)
-      .appendChild(collector);
-
-    await Promise.all([
-      new Promise(resolve => jsZip.onload = () => window.JSZip && resolve()),
-      new Promise(resolve => collector.onload = () => window.start && resolve()),
-    ]);
-
-    // TODO getImageElements - <a>/<img>
-    let imageElements;
-    // 需要做的就是筛选出imageElements标签集合, 并传给start()
-    start(imageElements);
-  })();
-  ```
-
-  ***
-
-  </details>
-
 - 2.需要完成筛选图片标签部分代码 (根据复杂度不同,代码量从 1~n 行不等)
 
   比如下面实现中的 SM.MS-collector,只需要这一行代码就可以完成筛选:
@@ -82,15 +49,11 @@ _拾图虫_
 
 ---
 
-- 4.如果遇到下面报错,是因为源站后台没有开启 CORS (反爬),需要 `安装浏览器插件`
+- 4.如果遇到下面报错,是因为源站后台没有开启 CORS (反爬),`需要安装浏览器插件` : [CORS Unblock](https://microsoftedge.microsoft.com/addons/detail/cors-unblock/hkjklmhkbkdhlgnnfbbcihcajofmjgbh?hl=zh-CN) / [Allow CORS: Access-Control-Allow-Origin](https://microsoftedge.microsoft.com/addons/detail/allow-cors-accesscontro/bhjepjpgngghppolkjdhckmnfphffdag?hl=zh-CN)
 
   ```
   Access to image at 'xxx' from origin 'xxx' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
   ```
-
-  > [CORS Unblock](https://microsoftedge.microsoft.com/addons/detail/cors-unblock/hkjklmhkbkdhlgnnfbbcihcajofmjgbh?hl=zh-CN)
-
-  > [Allow CORS: Access-Control-Allow-Origin](https://microsoftedge.microsoft.com/addons/detail/allow-cors-accesscontro/bhjepjpgngghppolkjdhckmnfphffdag?hl=zh-CN)
 
 ![分割线](https://cdn.jsdelivr.net/gh/Weidows/Images/img/divider.png)
 
@@ -121,18 +84,6 @@ _拾图虫_
 ## [暴力爬虫](./implements/violent-collector.js)
 
 - 硬核爬取下载网页内所有图片 (如有不想要的图需要后期手动删掉)
-
-![分割线](https://cdn.jsdelivr.net/gh/Weidows/Images/img/divider.png)
-
-# 历史版本
-
-<details>
-
-- [v1.0.0](./version/v1.0.0/)
-
-  下载的图片内置数据为 base64,过大,还需要额外压缩
-
-</details>
 
 ![分割线](https://cdn.jsdelivr.net/gh/Weidows/Images/img/divider.png)
 
