@@ -9,7 +9,7 @@
  * @!: *********************************************************************
  */
 
-(function () {
+(async () => {
   // 引入库函数
   const jsZip = document.createElement("script"),
     collector = document.createElement("script");
@@ -21,13 +21,17 @@
     .appendChild(jsZip)
     .appendChild(collector);
 
-  setTimeout(function () {
-    qqCollector();
-  }, 500);
+  await Promise.all([
+    new Promise(resolve => jsZip.onload = () => window.JSZip && resolve()),
+    new Promise(resolve => collector.onload = () => window.start && resolve()),
+  ]);
+  qqCollector();
 })();
 
 // ======================== 筛选-下载 ========================
 function qqCollector() {
+  console.log(start)
+  console.log(JSZip)
   let imageElements = document.getElementsByTagName("img");
 
   // 去掉头像
