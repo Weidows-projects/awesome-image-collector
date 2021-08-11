@@ -3,7 +3,7 @@
  * @Author: Weidows
  * @Date: 2021-07-07 20:30:06
  * @LastEditors: Weidows
- * @LastEditTime: 2021-07-10 12:05:33
+ * @LastEditTime: 2021-08-11 10:15:38
  * @FilePath: \awesome-image-collector\implements\QQ-collections-collector.js
  * @Description:
  * @!: *********************************************************************
@@ -30,8 +30,6 @@
 
 // ======================== 筛选-下载 ========================
 function qqCollector() {
-  console.log(start)
-  console.log(JSZip)
   let imageElements = document.getElementsByTagName("img");
 
   // 去掉头像

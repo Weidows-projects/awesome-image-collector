@@ -3,7 +3,7 @@
  * @Author: Weidows
  * @Date: 2021-07-06 19:42:41
  * @LastEditors: Weidows
- * @LastEditTime: 2021-07-10 09:23:20
+ * @LastEditTime: 2021-08-11 10:19:05
  * @FilePath: \awesome-image-collector\README.md
  * @Description:
  * @!: *********************************************************************
@@ -40,7 +40,7 @@ _拾图虫_
     <summary> -> 查看代码 View the code <- </summary>
 
   ```js
-  (function () {
+  (async () => {
     // 引入库函数
     const jsZip = document.createElement("script"),
       collector = document.createElement("script");
@@ -52,14 +52,15 @@ _拾图虫_
       .appendChild(jsZip)
       .appendChild(collector);
 
-    setTimeout(function () {
-      // wait for resources load
-      // TODO getImageElements - <a>/<img>
-      // 需要做的就是筛选出imageElements标签集合, 并传给start()
-      let imageElements;
+    await Promise.all([
+      new Promise(resolve => jsZip.onload = () => window.JSZip && resolve()),
+      new Promise(resolve => collector.onload = () => window.start && resolve()),
+    ]);
 
-      start(imageElements);
-    }, 500);
+    // TODO getImageElements - <a>/<img>
+    let imageElements;
+    // 需要做的就是筛选出imageElements标签集合, 并传给start()
+    start(imageElements);
   })();
   ```
 
