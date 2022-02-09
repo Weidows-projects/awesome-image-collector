@@ -3,7 +3,7 @@
  * @Author: Weidows
  * @Date: 2021-07-07 15:47:18
  * @LastEditors: Weidows
- * @LastEditTime: 2021-07-10 00:03:43
+ * @LastEditTime: 2022-02-10 02:56:56
  * @FilePath: \awesome-image-collector\src\collector.js
  * @Description:
  * @!: *********************************************************************
@@ -19,11 +19,25 @@ async function start(imageElements) {
     let url =
       imageElement.src == undefined ? imageElement.href : imageElement.src;
     if (url == undefined) continue;
-    let extName = url.substring(url.lastIndexOf(".") + 1);
+
+    /*
+      判断 url 中是否含有文件名; 如下为 fullName 示例
+      http://localhost:3000/api/v1/  ->  ''               ×
+      http://localhost:3000/api/v1/pic  ->  'pic'         ×
+      http://localhost:3000/api/v1/pic.png  ->  'pic.png' √
+    */
+    let fullName = url.split("/").pop(),
+      extName = "";
+    if (fullName.indexOf(".") != -1) {
+      extName = fullName.substring(fullName.lastIndexOf(".") + 1);
+    } else {
+      extName = "png";
+      fullName = new Date().getTime() + "." + extName;
+    }
 
     // 获取二进制数据/压缩
     let blob = await getBlob(url, extName);
-    zip.file(new Date().getTime() + "." + extName, blob, { base64: false });
+    zip.file(fullName, blob, { base64: false });
     console.log(
       "Successfully fetch one of the image,total is " + imageElements.length
     );
