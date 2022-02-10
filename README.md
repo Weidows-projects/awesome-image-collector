@@ -3,7 +3,7 @@
  * @Author: Weidows
  * @Date: 2021-07-06 19:42:41
  * @LastEditors: Weidows
- * @LastEditTime: 2021-08-11 10:30:14
+ * @LastEditTime: 2022-02-10 19:11:26
  * @FilePath: \awesome-image-collector\README.md
  * @Description:
  * @!: *********************************************************************
@@ -71,11 +71,9 @@ _拾图虫_
 
     <summary> -> 适用于下载 QQ 收藏中的图片集 (需要安装浏览器插件) <- </summary>
 
-  <img src="https://i.loli.net/2021/07/10/eLkP1iV5YXGm6Zy.png" alt="20210710001553" />
+  ![](image/README/1644491477727.png)
 
-  <img src="https://i.loli.net/2021/07/10/QV7WpATHJrGEPxU.png" alt="20210710090643" />
-
-  ***
+  ![](image/README/1644491499368.png)
 
   </details>
 
