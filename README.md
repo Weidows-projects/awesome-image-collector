@@ -3,7 +3,7 @@
  * @Author: Weidows
  * @Date: 2021-07-06 19:42:41
  * @LastEditors: Weidows
- * @LastEditTime: 2022-02-10 19:11:26
+ * @LastEditTime: 2022-02-25 18:45:41
  * @FilePath: \awesome-image-collector\README.md
  * @Description:
  * @!: *********************************************************************
@@ -13,23 +13,17 @@
 
 ⭐️ Awesome-Image-Collector ⭐️
 
-_拾图虫_
-
 </h1>
 
 # 功能
 
-1. 自动搜集下载页面中指定图片集, `手累度`: O(n) -> O(1)
+1. 自动搜集下载页面中指定图片集, `手累度`: O(n) -> O(1) 尤其在数十上百张图片场景下格外舒服.
 
-2. 下载原始地址图片数据,不会缩放转码,无 base64 中间态.
+2. `解决一般插件无法下载的隐性原始图片`,可通过插件实现跨域资源获取,不会缩放转码,无 base64 中间态.
 
-3. 可通过插件实现跨域资源获取.
+3. 获取图片后`自动后台打包`为 Zip 文件,免得蹦出几十条下载链接.
 
-4. 下载后自动后台打包为 Zip 文件,方便快捷.
-
-5. 虽然市面上有爬取图片功能的插件,但是开放性/自定义性不高,此脚本开源带来 100% 可自定义性.
-
-![分割线](https://cdn.jsdelivr.net/gh/Weidows/Images/img/divider.png)
+![分割线](https://www.helloimg.com/images/2022/07/01/ZM0SoX.png)
 
 # 使用
 
@@ -55,7 +49,7 @@ _拾图虫_
   Access to image at 'xxx' from origin 'xxx' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
   ```
 
-![分割线](https://cdn.jsdelivr.net/gh/Weidows/Images/img/divider.png)
+![分割线](https://www.helloimg.com/images/2022/07/01/ZM0SoX.png)
 
 # 实现
 
@@ -83,7 +77,7 @@ _拾图虫_
 
 - 硬核爬取下载网页内所有图片 (如有不想要的图需要后期手动删掉)
 
-![分割线](https://cdn.jsdelivr.net/gh/Weidows/Images/img/divider.png)
+![分割线](https://www.helloimg.com/images/2022/07/01/ZM0SoX.png)
 
 # 参考
 

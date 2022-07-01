@@ -9,6 +9,6 @@
     "build": "uglifyjs ./src/collector.js -o dist/collector.min.js"
   },
   "devDependencies": {
-    "uglifyjs": "2.4.11"
+    "uglifyjs": "^2.4.11"
   }
 }
