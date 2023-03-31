@@ -23,7 +23,7 @@
 
 3. 获取图片后`自动后台打包`为 Zip 文件,免得蹦出几十条下载链接.
 
-![分割线](https://www.helloimg.com/images/2022/07/01/ZM0SoX.png)
+<a>![分割线](https://cdn.jsdelivr.net/gh/Weidows/Weidows/image/divider.png)</a>
 
 # 使用
 
@@ -49,7 +49,7 @@
   Access to image at 'xxx' from origin 'xxx' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
   ```
 
-![分割线](https://www.helloimg.com/images/2022/07/01/ZM0SoX.png)
+<a>![分割线](https://cdn.jsdelivr.net/gh/Weidows/Weidows/image/divider.png)</a>
 
 # 实现
 
@@ -77,7 +77,7 @@
 
 - 硬核爬取下载网页内所有图片 (如有不想要的图需要后期手动删掉)
 
-![分割线](https://www.helloimg.com/images/2022/07/01/ZM0SoX.png)
+<a>![分割线](https://cdn.jsdelivr.net/gh/Weidows/Weidows/image/divider.png)</a>
 
 # 参考
 
